@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { TouchableOpacity } from "react-native";
 import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
 import { styles } from "./styles.ts";
 import { useState } from 'react';
@@ -10,20 +11,23 @@ export const App = () => {
 
     <View style={styles.header}>
 
-      <View style={styles.card}>
+      <TouchableOpacity activeOpacity={0.5}
+      style={styles.card}>
          <Image
             source={icon}
             style={styles.image}
           />
-      </View>
+      </TouchableOpacity>
 
-      <View style={styles.cardMeio}>
+      <View  style={styles.cardMeio}>
         <Text style={styles.textoUp}>
           Fazer upgrade
         </Text>
       </View>
 
-      <View style={styles.card}></View>
+      <TouchableOpacity activeOpacity={0.5}
+      style={styles.card}>
+      </TouchableOpacity>
 
     </View>
 
